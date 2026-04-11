@@ -1,0 +1,276 @@
+@charset "UTF-8";
+
+/* 共通 */
+body {
+	font-family: 'Sigmar', cursive;
+	text-align: center;
+	background-color: #ffffff;
+}
+
+small {
+	font-size: inherit;
+}
+
+.mv-image {
+  width: 100%;
+  height: auto;
+}
+
+.hiyokoMv-wrap {
+	position: relative;
+	width: 100vw;
+}
+
+p {
+	font-family: sans-serif;
+	font-size: 16px;
+	line-height: 170%;
+	color: #000000;
+}
+
+.kohiyo {
+	padding: 50px 0 50px;
+}
+
+.introduction-text {
+  text-align: center;
+  display: grid;
+  gap: 1em;
+}
+
+.photoShot {
+	padding: 50px 0 50px;
+	background-color: #F9F5EF;
+}
+
+.flex-item.text-block {
+  flex-direction: column;   /* 縦に並ぶ */
+  align-items: center;  /* 左揃えにする */
+}
+
+.flex-item.text-block p {
+  margin-top: 1em;        /* 段落間余白 */
+}
+
+.family {
+	padding: 50px 0 50px;
+	background-color: #ffffff;
+}
+
+.flex-item-family figcaption {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.family-sub {
+	font-size: 14px;
+}
+
+.footer {
+	height: 50px;
+	background-color: #644025;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.footer-text {
+	font-size: 12px;
+	color: #ffffff;
+}
+
+.visuallyhidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+  clip-path: inset(0px 0px 99.9% 99.9%);
+  border: 0;
+}
+
+
+
+/* スマホ 〜 タブレット版 */
+@media (max-width: 1023px) {
+	header {
+		height: 64px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.logo-link {
+		text-decoration: none;
+		color: #442611;
+		font-size: 20px;
+	}
+
+	.hiyokoMv-text {
+		width: 285px;
+		position: absolute;
+		top: 20%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: #442611;
+		font-size: 48px;
+		font-family: 'Sigmar', cursive;
+		pointer-events: none;
+	}
+
+	.hiyoko {
+		width: 210px;
+		height: auto;
+		display: block;
+		margin: 0 auto;
+	}
+
+	.br-sp {
+		display: block; /* スマホ用：改行表示 */
+	}
+
+	h2 {
+		color: #442611;
+		font-size: 28px;
+		margin-bottom: 30px;
+	}
+
+	.flex-container {
+		display: flex;
+		width: 352px;
+		flex-wrap: wrap; /* 子要素が折り返す */
+		margin: 0 auto;
+	}
+
+	.flex-item {
+		width: 352px;
+		height: 218px;
+		background-color: #ffffff;
+		justify-content: center;
+		display: flex;
+		align-items: center;
+		/* margin-bottom: 66px; 1行目と2行目の間に余白 */
+		line-height: 150%;
+	}
+
+	.flex-container-family {
+		display: flex;
+		width: 352px;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin: 0 auto;
+	}
+
+	.flex-item-family {
+		width: 172px;
+		height: 207px;
+		background-color: #ffffff;
+		justify-content: center;
+		display: flex;
+		align-items: center;
+		flex-direction: column; /* 画像の下にテキストを表示 */
+	}
+
+	/* スマホ用：フレックスアイテムの順番変更 */
+	.flex-item:nth-child(3) { order: 4; }
+	.flex-item:nth-child(4) { order: 3; }
+
+	/* スマホ用：2番目のフレックスアイテムの下にのみ余白 */
+	.flex-item:nth-child(2) {
+		margin-bottom: 40px; 
+	}
+}
+
+/* PC用 */
+@media (min-width: 1024px) {
+    header {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo-link {
+			text-decoration: none;
+        color: #442611;
+        font-size: 24px;
+    }
+
+    .hiyokoMv-text {
+        width: 350px;
+        position: absolute;
+        top: 50%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+        color: #442611;
+        font-size: 59px;
+				font-family: 'Sigmar', cursive;
+        pointer-events: none;
+    }
+
+    .hiyoko {
+        width: 240px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    h2 {
+        color: #442611;
+        font-size: 48px;
+        margin-bottom: 30px;
+    }
+
+    .flex-container {
+        display: flex;
+        width: 980px;
+        flex-wrap: wrap; /* 子要素が折り返す */
+        margin: 0 auto;
+    }
+
+    .flex-item {
+        width: 490px;
+        height: 304px;
+        background-color: #ffffff;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        margin-bottom: 66px; /* 1行目と2行目の間に余白 */
+        line-height: 150%;
+    }
+
+    .flex-container-family {
+        display: flex;
+        width: 726px;
+        height: 530px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    .flex-item-family {
+        width: 210px;
+        height: 241px;
+        background-color: #ffffff;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column; /* 画像の下にテキストを表示 */
+        margin-bottom: 50px; /* 1行目と2行目の間に余白 */
+    }
+
+    .br-sp {
+        display: none; /* スマホ用の改行は非表示 */
+    }
+
+    /* PC用：順番を元に戻す */
+    .flex-item:nth-child(3) { order: 3; }
+    .flex-item:nth-child(4) { order: 4; }
+
+    .flex-item:nth-child(2) {
+        margin-bottom: 0; /* PCでは余白なし */
+    }
+}
+
