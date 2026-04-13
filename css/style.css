@@ -18,11 +18,12 @@ small {
 
 .hiyokoMv-wrap {
 	position: relative;
-	width: 100vw;
+	width: 100%;
+	overflow: hidden;
 }
 
 p {
-	font-family: sans-serif;
+	font-family: 'Noto Sans JP', sans-serif;
 	font-size: 16px;
 	line-height: 170%;
 	color: #000000;
@@ -139,14 +140,14 @@ p {
 
 	.flex-container {
 		display: flex;
-		width: 352px;
+		width: min(90%, 352px);
 		flex-wrap: wrap; /* 子要素が折り返す */
 		margin: 0 auto;
 	}
 
 	.flex-item {
-		width: 352px;
-		height: 218px;
+		width: 100%;
+		min-height: 218px;
 		background-color: #ffffff;
 		justify-content: center;
 		display: flex;
@@ -225,14 +226,14 @@ p {
 
     .flex-container {
         display: flex;
-        width: 980px;
+		width: min(90%, 980px);
         flex-wrap: wrap; /* 子要素が折り返す */
         margin: 0 auto;
     }
 
     .flex-item {
-        width: 490px;
-        height: 304px;
+		width: 50%;
+		min-height: 304px;
         background-color: #ffffff;
         justify-content: center;
         display: flex;
@@ -268,9 +269,5 @@ p {
     /* PC用：順番を元に戻す */
     .flex-item:nth-child(3) { order: 3; }
     .flex-item:nth-child(4) { order: 4; }
-
-    .flex-item:nth-child(2) {
-        margin-bottom: 0; /* PCでは余白なし */
-    }
 }
 
